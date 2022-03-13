@@ -32,6 +32,17 @@ function App() {
     // console.log(newTodos);
   };
 
+  const updateTodoHandler = (id, todoEdited) => {
+    const newTodos = todos.map((todo) => {
+      if (id !== todo.id) {
+        return todo;
+      } else {
+        return todoEdited;
+      }
+    });
+    setTodos(newTodos);
+  };
+
   return (
     <>
       <Navbar />
@@ -45,6 +56,7 @@ function App() {
               title={todo.title}
               desc={todo.desc}
               deleteTodoHandler={deleteTodoHandler}
+              updateTodoHandler={updateTodoHandler}
             />
           );
         })}

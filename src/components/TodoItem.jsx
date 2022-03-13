@@ -1,12 +1,19 @@
-function TodoItem({ title, desc, id, deleteTodoHandler }) {
+import EditTodo from './EditTodo';
+
+function TodoItem({ title, desc, id, deleteTodoHandler, updateTodoHandler }) {
   return (
     <div className="card mb-2">
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{desc}</p>
-        <a href="#" className="btn btn-secondary me-2">
-          Edit
-        </a>
+
+        <EditTodo
+          id={id}
+          updateTodoHandler={updateTodoHandler}
+          title={title}
+          desc={desc}
+        />
+
         <a
           href="#"
           className="btn btn-danger"
