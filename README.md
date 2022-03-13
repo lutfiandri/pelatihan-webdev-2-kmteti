@@ -1,10 +1,11 @@
 # Pelatihan Web Development 2 KMTETI
 
-| Topic                             | Branch           | Slide                     |
-| --------------------------------- | ---------------- | ------------------------- |
-| Basic Javascript                  | [basic-js]       | [javascript-crash-course] |
-| Basic Node and Javascript Modules | [js-modules]     | [what-is-node-js]         |
-| React Todo App (Static)           | [todoapp-static] | -                         |
+| Topic                             | Branch             | Slide                     |
+| --------------------------------- | ------------------ | ------------------------- |
+| Basic Javascript                  | [basic-js]         | [javascript-crash-course] |
+| Basic Node and Javascript Modules | [js-modules]       | [what-is-node-js]         |
+| React Todo App (Static)           | [todoapp-static]   | -                         |
+| React Todo App 2 (Static)         | [todoapp-static-2] | -                         |
 
 <!-- links -->
 
@@ -21,3 +22,4 @@
 <!-- Todo App -->
 
 [todoapp-static]: https://github.com/lutfiandri/pelatihan-webdev-2-kmteti/tree/todoapp-static
+[todoapp-static-2]: https://github.com/lutfiandri/pelatihan-webdev-2-kmteti/tree/todoapp-static-2
