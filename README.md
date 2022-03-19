@@ -2,10 +2,11 @@
 
 | Topic                             | Branch             | Slide                     |
 | --------------------------------- | ------------------ | ------------------------- |
-| Basic Javascript                  | [basic-js]         | [javascript-crash-course] |
-| Basic Node and Javascript Modules | [js-modules]       | [what-is-node-js]         |
+| Basic JavaScript                  | [basic-js]         | [javascript-crash-course] |
+| Basic Node and JavaScript Modules | [js-modules]       | [what-is-node-js]         |
 | React Todo App (Static)           | [todoapp-static]   | -                         |
 | React Todo App 2 (Static)         | [todoapp-static-2] | -                         |
+| Asynchronous JavaScript           | [js-async]         | [asynchronous-javascript] |
 
 <!-- links -->
 
@@ -23,3 +24,8 @@
 
 [todoapp-static]: https://github.com/lutfiandri/pelatihan-webdev-2-kmteti/tree/todoapp-static
 [todoapp-static-2]: https://github.com/lutfiandri/pelatihan-webdev-2-kmteti/tree/todoapp-static-2
+
+<!-- Async -->
+
+[js-async]: https://github.com/lutfiandri/pelatihan-webdev-2-kmteti/tree/js-async
+[asynchronous-javascript]: https://docs.google.com/presentation/d/1rr4irY_xJmUBp-_13hjprRrgh96lGWGJ6PY6nAwaTPI/edit?usp=sharing
