@@ -1,12 +1,15 @@
 # Pelatihan Web Development 2 KMTETI
 
-| Topic                             | Branch             | Slide                     |
-| --------------------------------- | ------------------ | ------------------------- |
-| Basic JavaScript                  | [basic-js]         | [javascript-crash-course] |
-| Basic Node and JavaScript Modules | [js-modules]       | [what-is-node-js]         |
-| React Todo App (Static)           | [todoapp-static]   | -                         |
-| React Todo App 2 (Static)         | [todoapp-static-2] | -                         |
-| Asynchronous JavaScript           | [js-async]         | [asynchronous-javascript] |
+| Topic                             | Branch              | Slide                     |
+| --------------------------------- | ------------------- | ------------------------- |
+| Basic JavaScript                  | [basic-js]          | [javascript-crash-course] |
+| Basic Node and JavaScript Modules | [js-modules]        | [what-is-node-js]         |
+| React Todo App (Static)           | [todoapp-static]    | -                         |
+| React Todo App 2 (Static)         | [todoapp-static-2]  | -                         |
+| Asynchronous JavaScript           | [js-async]          | [asynchronous-javascript] |
+| React Todo App (Firestore)        | [todoapp-firestore] | -                         |
+
+Projek hasil pelatihan [todoapp-kmteti.netlify.app](https://todoapp-kmteti.netlify.app)
 
 <!-- links -->
 
@@ -24,6 +27,7 @@
 
 [todoapp-static]: https://github.com/lutfiandri/pelatihan-webdev-2-kmteti/tree/todoapp-static
 [todoapp-static-2]: https://github.com/lutfiandri/pelatihan-webdev-2-kmteti/tree/todoapp-static-2
+[todoapp-firestore]: https://github.com/lutfiandri/pelatihan-webdev-2-kmteti/tree/todoapp-firestore
 
 <!-- Async -->
 
