@@ -11,7 +11,6 @@ export default function EditTodo({ id, updateTodoHandler, title: t, desc: d }) {
     }
 
     const todo = {
-      id: id,
       title: title,
       desc: desc,
     };

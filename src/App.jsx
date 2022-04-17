@@ -1,46 +1,59 @@
 import { nanoid } from 'nanoid';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TodoItem from './components/TodoItem';
 import FormInputTodo from './components/FormInputTodo';
 import Navbar from './components/Navbar';
+import {
+  collection,
+  addDoc,
+  query,
+  onSnapshot,
+  doc,
+  deleteDoc,
+  setDoc,
+} from 'firebase/firestore';
+import { db } from './firebase';
 
 function App() {
-  const [todos, setTodos] = useState([
-    {
-      id: nanoid(),
-      title: 'Tugas Keamanan Komputer',
-      desc: 'Membandingkan keamanan OS Windows dan Linux',
-    },
-    {
-      id: nanoid(),
-      title: 'Tugas Matematika Diskret',
-      desc: 'PR di elok. 10 soal. Deadline tanggal 8.',
-    },
-  ]);
+  const [todos, setTodos] = useState([]);
 
-  const addTodoHandler = (todo) => {
-    const newTodos = [...todos, todo];
-    setTodos(newTodos);
-    // console.log(newTodos);
+  useEffect(() => {
+    const q = query(collection(db, 'todos'));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const todosDB = [];
+      querySnapshot.forEach((doc) => {
+        let data = doc.data();
+        data.id = doc.id;
+        console.log(data);
+        todosDB.push(data);
+      });
+      setTodos(todosDB);
+    });
+  }, []);
+
+  const addTodoHandler = async (todo) => {
+    try {
+      const docRef = await addDoc(collection(db, 'todos'), todo);
+      console.log('Document written with ID: ', docRef.id);
+    } catch (e) {
+      console.error('Error adding document: ', e);
+    }
   };
 
-  const deleteTodoHandler = (id) => {
-    const newTodos = todos.filter((todo) => {
-      return todo.id !== id;
-    });
-    setTodos(newTodos);
-    // console.log(newTodos);
+  const deleteTodoHandler = async (id) => {
+    try {
+      await deleteDoc(doc(db, 'todos', id));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  const updateTodoHandler = (id, todoEdited) => {
-    const newTodos = todos.map((todo) => {
-      if (id !== todo.id) {
-        return todo;
-      } else {
-        return todoEdited;
-      }
-    });
-    setTodos(newTodos);
+  const updateTodoHandler = async (id, todoEdited) => {
+    try {
+      await setDoc(doc(db, 'todos', id), todoEdited);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

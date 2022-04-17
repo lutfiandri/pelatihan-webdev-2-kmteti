@@ -12,7 +12,6 @@ function FormInputTodo({ addTodoHandler }) {
     }
 
     const todo = {
-      id: nanoid(),
       title: title,
       desc: desc,
     };
